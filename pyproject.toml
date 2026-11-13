@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vllm-hust-prefill-admission"
+version = "0.1.0"
+description = "TraceLoom-guided Prefill Admission configuration MOD using stock vLLM controls"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "build"]
+
+[project.scripts]
+traceloom-prefill-admission = "traceloom_prefill_admission:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

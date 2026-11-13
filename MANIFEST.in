@@ -1,0 +1,5 @@
+include MOD_METADATA.json MAINTAINERS.md
+recursive-include docs *.md
+recursive-include evidence *.json
+recursive-include examples *.py *.json
+recursive-include tests *.py

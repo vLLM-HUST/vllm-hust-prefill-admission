@@ -1,0 +1,28 @@
+{
+  "model": "/path/to/Qwen3-0.6B",
+  "dtype": "float16",
+  "tensor_parallel_size": 1,
+  "distributed_executor_backend": "uni",
+  "max_model_len": 4096,
+  "max_num_seqs": 4,
+  "max_num_batched_tokens": 256,
+  "enable_chunked_prefill": true,
+  "enable_prefix_caching": false,
+  "enforce_eager": false,
+  "async_scheduling": true,
+  "seed": 17,
+  "long_prefill_token_threshold": 0,
+  "compilation_config": {
+    "cudagraph_capture_sizes": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ]
+  }
+}
